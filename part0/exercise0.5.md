@@ -1,5 +1,4 @@
-```markdown
-# SPA Visit Diagram
+#SPA Visit Diagram
 
 ```mermaid
 sequenceDiagram

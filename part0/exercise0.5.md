@@ -1,8 +1,4 @@
 
----
-
-### **exercise0.5.md – Single Page App (SPA) Visit**
-
 ```markdown
 # SPA Visit Diagram
 

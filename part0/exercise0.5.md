@@ -1,4 +1,3 @@
-
 ```markdown
 # SPA Visit Diagram
 
@@ -14,4 +13,4 @@ sequenceDiagram
     Browser->>Server: GET /spa.js
     Browser->>Server: GET /data.json
     Server-->>Browser: Notes JSON
-    Browser-->>User: Renders notes list (SPA)
+    Browser->>User: Renders notes list (SPA)

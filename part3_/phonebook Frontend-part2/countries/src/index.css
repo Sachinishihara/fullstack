@@ -1,0 +1,23 @@
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: white;
+  color: black;
+}
+
+button {
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+img {
+  margin-top: 10px;
+}
+
+li {
+  margin-bottom: 5px;
+}

@@ -75,8 +75,12 @@ const App = () => {
             showMessage(`Updated ${newName}`, 'success')
           })
           .catch(error => {
-            showMessage(`Information of ${newName} has already been removed from server`, 'error')
-            setPersons(persons.filter(person => person.id !== existingPerson.id))
+            if (error.response?.status === 404) {
+              showMessage(`Information of ${newName} has already been removed from server`, 'error')
+              setPersons(persons.filter(person => person.id !== existingPerson.id))
+            } else {
+              showMessage(error.response?.data?.error || 'Failed to update person', 'error')
+            }
           })
       }
       return
@@ -96,7 +100,7 @@ const App = () => {
         showMessage(`Added ${returnedPerson.name}`, 'success')
       })
       .catch(error => {
-        showMessage('Failed to add person', 'error')
+        showMessage(error.response?.data?.error || 'Failed to add person', 'error')
       })
   }
 
@@ -110,7 +114,7 @@ const App = () => {
           setPersons(persons.filter(p => p.id !== id))
         })
         .catch(error => {
-          showMessage(`Failed to delete ${person.name}`, 'error')
+          showMessage(error.response?.data?.error || `Failed to delete ${person.name}`, 'error')
         })
     }
   }

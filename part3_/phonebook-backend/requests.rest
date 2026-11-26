@@ -1,40 +1,32 @@
 
+### Exercise 3.13 - Get all contacts
 GET http://localhost:3001/api/persons
 
-###
-
-GET http://localhost:3001/info
-
-###
-
-GET http://localhost:3001/api/persons/1
-
-###
-
-GET http://localhost:3001/api/persons/999
-
-###
-
+### Exercise 3.14 - Add a new contact
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
 {
   "name": "New Student",
-  "number": "123456"
+  "number": "040-1234567"
 }
 
-###
+### Exercise 3.18 - Get individual contact
+GET http://localhost:3001/api/persons/6b033201d5526331917c211c
 
-POST http://localhost:3001/api/persons
+### Exercise 3.17 - Update phone number
+PUT http://localhost:3001/api/persons/6b033201d5526331917c211c
 Content-Type: application/json
 
 {
-  "name": "Arto Hellas",
-  "number": "999999"
+  "name": "Test MongoDB",
+  "number": "99999999"
 }
 
-###
+### Exercise 3.16 - Test invalid ID
+GET http://localhost:3001/api/persons/invalid-id
 
+### Test missing number
 POST http://localhost:3001/api/persons
 Content-Type: application/json
 
@@ -42,6 +34,60 @@ Content-Type: application/json
   "name": "Missing Number"
 }
 
-###
+### Exercise 3.15 - Delete contact
+DELETE http://localhost:3001/api/persons/6b033201d5526331917c211c
 
-DELETE http://localhost:3001/api/persons/4
+### Exercise 3.18 - Phonebook information
+GET http://localhost:3001/info
+
+### Verify final contact list
+GET http://localhost:3001/api/persons
+
+
+### Short name
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "Jo",
+  "number": "040-1234567"
+}
+
+### Short number
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "number": "040-12"
+}
+
+### Invalid number
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "number": "123456789"
+}
+
+### Invalid format
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "number": "1234-56789"
+}
+
+### Valid contact
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+  "name": "John Smith",
+  "number": "040-1234567"
+}
+
+### Get all
+GET http://localhost:3001/api/persons

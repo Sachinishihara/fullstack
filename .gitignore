@@ -1,5 +1,10 @@
-node_modules/
+﻿node_modules/
 .env
 .env.*
 dist/
+build/
+coverage/
+playwright-report/
+test-results/
+*.log
 !part3_/phonebook-backend/dist/

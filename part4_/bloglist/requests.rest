@@ -1,0 +1,24 @@
+### Get blogs
+GET http://localhost:3003/api/blogs
+
+### Add blog
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Learning React",
+  "author": "John Smith",
+  "url": "https://example.com/react",
+  "likes": 5
+}
+
+### Add blog
+POST http://localhost:3003/api/blogs
+Content-Type: application/json
+
+{
+  "title": "Learning Node.js",
+  "author": "Anna",
+  "url": "https://example.com/node",
+  "likes": 10
+}
